@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    position: fixed;/*Esto es para que no se pueda dar scroll en la viewport y se muestre solo la pagina principal del sitio web*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    display: inline;
+}
+/*Cuerpo de la pagina de blogs le cambiamos el position para poder hacer scroll*/
+.body-blogs{
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+header .container-redes-sociales{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #47cfac;
+    justify-content: flex-end;
+}
+.container-redes-sociales__iconos{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+.container-redes-sociales__iconos .iconos img{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
+
+/*Segunda seccion del header: donde está el menú*/
+header .menu-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+}
+
+.menu-container .menu-container__logo{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.menu-container__logo a img{
+    width: 230px;
+    height: auto;
+}
+.menu-container .menu-container__about-me{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 50px;
+}
+.menu-container__about-me a{
+    color: black;
+    border-bottom: 1px solid black;
+    font-size: 1.8rem;
+}
+.menu-container__about-me a img{
+    width: 200px;
+    height: auto;
+}
+
+/*Home del sitio web:*/
+.main-home{
+    background-image: url("/assets/img/home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.main-home .main-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+}
+.main-container div {
+    width: 600px;
+}
+.main-container div h1{
+    color: white;
+    width: 100%;
+    margin-top: 100px;
+    font-size: 3.4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.main-container .boton-main{
+    margin: auto;
+    width: 130px;
+    height: 40px;
+    top: 0;
+    margin-top: 40px;
+    border: none;
+    background-color: #47cfac;
+    font-weight: 700;
+}
+
+/*Main de la pagina del blog:*/
+/*Primera seccion*/
+article .container-main-blogs{
+    display: grid;
+    width: 100%;
+    height: 70%;
+    grid-template-columns: 1fr 1fr;
+    background-color: #e6e9ed;
+    padding: 0px 0px 0px 110px;
+}
+.container-main-blogs .container-main-blogs__imagen{
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+.container-main-blogs__imagen h2{
+    width: 100%;
+    color: black;
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+    font-size: 2.4rem;
+}
+.container-main-blogs__imagen figure{
+    display: flex;
+    justify-content: start;
+    margin-left: 0px;
+
+}
+.container-main-blogs__imagen figure img{
+    width: 85%;
+    height: 300px;
+    left: 0px;
+}
+
+.container-main-blogs .container-main-blogs__info{
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    width: 100%;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+.container-main-blogs__info div{
+    grid-row: 1;
+    margin: 0px;
+    width: 75%;
+    align-self: flex-start;
+    margin-top: 80px;
+}
+.container-main-blogs__info div h2{
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+.container-main-blogs__info div p{
+    font-size: 1.2rem;
+}
+.container-main-blogs__info .button-blogs-info{
+    grid-row: 2;
+    height: 40px;
+    width: 140px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: 1px solid #47CFAC;
+    background-color: transparent;
+}
+
+/*Seccion del titulo 2:*/
+article .container-titulo2 h3{
+    border-bottom: 1px solid #cdd2da;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.4rem;
+}
+/*Segunda seccion del main:*/
+.articulo-seccion2{
+    width: 100%;
+    padding: 80px 50px 0px 80px;
+}
+.articulo-seccion2 .container-blogs-post{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+.container-blogs-post .container-blogs-post__card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.container-blogs-post__card div{
+    max-width: 90%;
+    width: 100%;
+}
+.container-blogs-post__card div figure img{
+    width: 100%;
+}
+.container-blogs-post__card div h2, p{
+    width: 100%;
+    margin-top: 10px;
+}
+.container-blogs-post__card .button-blogs-info{
+    height: 40px;
+    width: 140px;
+    margin: 20px 0px 45px 0px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: 1px solid #47CFAC;
+    background-color: transparent;
+}
+
+/*Footer:*/
+footer{
+    width: 100%;
+    height: 120px;
+    background-color: #22272d;
+    border-top: 35px solid #47cfac;
+    text-align: center;
+    display: flex;
+}
+footer p{
+    color: white;
+    align-self: center;
+}
+
+
+/*Pagina de los blog:*/
+/*Seccion de la imagen principal del blog:*/
+section .blogpost-img-container{
+    width: 100%;
+    height: 50%;
+    padding: 0px 80px 40px;
+    text-align: center;
+}
+.blogpost-img-container figure img{
+    width: 80%;
+    height: auto;
+}
+
+/*Segunda seccion donde va el post:*/
+article .blogpost-main-container{
+    width: 100%;
+    padding: 5px 200px 0px;
+    margin-bottom: 60px;
+}
+.blogpost-main-container h1{
+    width: 100%;
+    color: black;
+    font-size: 2rem;
+    border-bottom: 1px solid #cdd2da;
+    padding-bottom: 10px;
+}
+.blogpost-main-container div > h2{
+    font-size: 2.9rem;
+    color: black;
+    padding: 20px 0px;
+}
+.blogpost-main-container div > p{
+    font-size: 1.6rem;
+    color: black;
+}
+
+/*Tercera seccion donde va el contacto:*/
+section .container-main-contact{
+    background-color: #eceff1;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 80px;
+}
+/*codigo unico para estos contenedores*/
+.container-contact__left , .container-contact__right{
+    width: 100%;
+    height: auto;
+    padding: 40px 60px 90px;
+    display: flex;
+    justify-content: center;
+}
+/*codigo unico para los estos contenedores*/
+.container-contact__left div, .container-contact__right div{
+    align-self: center;
+    width: 60%;
+}
+.container-contact figure > img{
+    width: 100px;
+    text-align: center;
+}
+.container-contact div h3{
+    font-size: 1.6rem;
+}
+.container-contact div p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.container-contact div h3, p{
+    margin-left: 12px;
+}
+.container-contact div h3 a{
+    border-bottom: 1px solid #E6E9ED;
+}
+
+/*Pagina de mi perfil:*/
+/*seccion sobre mi:*/
+main article .container-main-profile{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 70px 80px 40px;
+    background-color: #e6e9ed;
+}
+.container-main-profile .container-main-profile__imagen{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: block;
+}
+.container-main-profile__imagen figure >img{
+    width: 100%;
+    height: 300px;
+    border-radius: 550px;
+}
+
+.container-main-profile .container-main-profile__info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 150px;
+}
+.container-main-profile__info div{
+    width: 100%;
+    height: 100%;
+}
+.container-main-profile__info h2{
+    font-size: 2.4rem;
+}
+.container-main-profile__info p{
+    font-size: 1.2rem;
+    padding-left: 0px;
+}
+
+/*Seccion de los proyectos:*/
+
+.articulo-seccion-projects{
+    width: 100%;
+    padding: 30px 100px 40px 130px;
+}
+.articulo-seccion-projects h1{
+    text-align: center;
+    width: 100%;
+    font-size: 2.4rem;
+    padding-bottom: 30px;
+}
+.articulo-seccion-projects h1 >a{
+    border-bottom: 1px solid #cdd2da;
+}
+.articulo-seccion-projects .container-profile-post{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.container-profile-post .container-profile-post__card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-profile-post__card div{
+    max-width: 90%;
+    width: 100%;
+}
+.container-profile-post__card div figure img{
+    width: 100%;
+    margin: 0px;
+    padding-left: 0px;
+}
+.container-profile-post__card div h2, p{
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 0px;
+}
+.container-profile-post__card .button-profile-info{
+    height: 40px;
+    width: 140px;
+    margin: 20px 0px 45px 0px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: 1px solid #47CFAC;
+    background-color: transparent;
+}
+
+
+
